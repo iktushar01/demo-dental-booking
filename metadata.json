@@ -1,0 +1,6 @@
+{
+  "name": "BrightSmile Dental - Modern Appointment Booking",
+  "description": "Premium dental clinic appointment booking system with real-time slot scheduling, patient portal, and admin management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
