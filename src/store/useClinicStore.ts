@@ -313,17 +313,30 @@ export const useClinicStore = create<ClinicStoreState>()(
       },
     }),
     {
-      name: 'brightsmile_clinic_store_v2',
+      name: 'brightsmile_clinic_store_v3',
       storage: createJSONStorage(() => localStorage),
       onRehydrateStorage: () => (state) => {
-        if (state?.services) {
-          state.services = state.services.map((s) => {
-            const seedMatch = seedServices.find((seed) => seed.id === s.id);
-            return {
-              ...s,
-              imageUrl: s.imageUrl || seedMatch?.imageUrl,
-            };
-          });
+        if (state) {
+          if (state.services) {
+            state.services = state.services.map((s) => {
+              const seedMatch = seedServices.find((seed) => seed.id === s.id);
+              const isInvalidPath = !s.imageUrl || s.imageUrl.startsWith('/src/assets/');
+              return {
+                ...s,
+                imageUrl: isInvalidPath ? seedMatch?.imageUrl : s.imageUrl,
+              };
+            });
+          }
+          if (state.dentists) {
+            state.dentists = state.dentists.map((d) => {
+              const seedMatch = seedDentists.find((seed) => seed.id === d.id);
+              const isInvalidPath = !d.avatarUrl || d.avatarUrl.startsWith('/src/assets/');
+              return {
+                ...d,
+                avatarUrl: isInvalidPath ? seedMatch?.avatarUrl : d.avatarUrl,
+              };
+            });
+          }
         }
       },
     }

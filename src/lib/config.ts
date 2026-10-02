@@ -1,5 +1,16 @@
 import { ClinicConfig } from '../types';
 
+import heroImg from '../assets/images/hero_brightsmile_clinic_1790911006598.jpg';
+import suiteImg from '../assets/images/clinic_operatory_suite_1790911060142.jpg';
+import drSarahImg from '../assets/images/dentist_dr_sarah_1790911023044.jpg';
+import drMarcusImg from '../assets/images/dentist_dr_marcus_1790911036337.jpg';
+import drElenaImg from '../assets/images/dentist_dr_elena_1790911048183.jpg';
+import examImg from '../assets/images/service_exam_diagnostic_1790911975340.jpg';
+import cleaningImg from '../assets/images/service_dental_cleaning_1790911944455.jpg';
+import whiteningImg from '../assets/images/service_whitening_laser_1790911917597.jpg';
+import alignersImg from '../assets/images/service_clear_aligners_1790911931274.jpg';
+import implantImg from '../assets/images/service_dental_implant_1790911960356.jpg';
+
 export const defaultClinicConfig: ClinicConfig = {
   name: 'BrightSmile Dental',
   tagline: 'Gentle, modern dentistry designed around your comfort',
@@ -17,17 +28,17 @@ export const defaultClinicConfig: ClinicConfig = {
 };
 
 export const CLINIC_IMAGES = {
-  hero: '/src/assets/images/hero_brightsmile_clinic_1790911006598.jpg',
-  suite: '/src/assets/images/clinic_operatory_suite_1790911060142.jpg',
-  drSarah: '/src/assets/images/dentist_dr_sarah_1790911023044.jpg',
-  drMarcus: '/src/assets/images/dentist_dr_marcus_1790911036337.jpg',
-  drElena: '/src/assets/images/dentist_dr_elena_1790911048183.jpg',
-  exam: '/src/assets/images/service_exam_diagnostic_1790911975340.jpg',
-  cleaning: '/src/assets/images/service_dental_cleaning_1790911944455.jpg',
-  whitening: '/src/assets/images/service_whitening_laser_1790911917597.jpg',
-  filling: '/src/assets/images/clinic_operatory_suite_1790911060142.jpg',
-  rootCanal: '/src/assets/images/clinic_operatory_suite_1790911060142.jpg',
-  extraction: '/src/assets/images/hero_brightsmile_clinic_1790911006598.jpg',
-  aligners: '/src/assets/images/service_clear_aligners_1790911931274.jpg',
-  implant: '/src/assets/images/service_dental_implant_1790911960356.jpg',
+  hero: heroImg,
+  suite: suiteImg,
+  drSarah: drSarahImg,
+  drMarcus: drMarcusImg,
+  drElena: drElenaImg,
+  exam: examImg,
+  cleaning: cleaningImg,
+  whitening: whiteningImg,
+  filling: suiteImg,
+  rootCanal: suiteImg,
+  extraction: heroImg,
+  aligners: alignersImg,
+  implant: implantImg,
 };
